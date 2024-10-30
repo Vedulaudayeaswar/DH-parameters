@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DH Parameters Simulator</title>
+    <link rel="stylesheet" href="style.css">
+   
+
+</head>
+<body>
+    <video id="video-background" autoplay muted loop>
+        <source src="./videoplayback (1).mp4" type="video/mp4"> 
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="transparent-box" id="input-container">
+        <h2>Enter Number of Links</h2>
+        <input type="number" id="num_links" min="1" value="2">
+        <button onclick="generateInputs()">Generate Inputs</button>
+
+        <div id="link-parameters"></div>
+
+        <h3>Base Position</h3>
+        <label for="base_x">Base X:</label>
+        <input type="number" id="base_x" value="0">
+        <label for="base_y">Base Y:</label>
+        <input type="number" id="base_y" value="0">
+        <label for="base_z">Base Z:</label>
+        <input type="number" id="base_z" value="0">
+
+        <button onclick="runPythonCode()">Run Code</button>
+        
+        <div id="output"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+
+    <script src="script.js"></script>
+    
+
+</body>
+</html>
